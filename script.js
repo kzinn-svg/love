@@ -191,9 +191,10 @@ if (entrar && intro) {
     entrar.addEventListener("click", () => {
 
         intro.style.opacity = "0";
+        intro.style.pointerEvents = "none";
 
         setTimeout(() => {
-            intro.style.display = "none";
+            intro.remove();
         }, 900);
 
     });
