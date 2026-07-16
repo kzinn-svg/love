@@ -253,27 +253,28 @@ heart.remove();
 // CARROSSEL
 // =========================
 
-const slides=document.querySelector(".slides");
+const slides = document.querySelector(".slides");
+const bolinhas = document.querySelectorAll(".indicadores span");
 
-const bolinhas=document.querySelectorAll(".indicadores span");
+if (slides && bolinhas.length > 0) {
 
-let slideAtual=0;
+    let slideAtual = 0;
 
-function mudarSlide(){
+    function mudarSlide() {
 
-slideAtual++;
+        slideAtual++;
 
-if(slideAtual>1){
+        if (slideAtual >= bolinhas.length) {
+            slideAtual = 0;
+        }
 
-slideAtual=0;
+        slides.style.transform = `translateX(-${slideAtual * 100}%)`;
 
-}
+        bolinhas.forEach(b => b.classList.remove("ativo"));
+        bolinhas[slideAtual].classList.add("ativo");
+    }
 
-slides.style.transform=`translateX(-${slideAtual*100}%)`;
-
-bolinhas.forEach(b=>b.classList.remove("ativo"));
-
-bolinhas[slideAtual].classList.add("ativo");
+    setInterval(mudarSlide, 3500);
 
 }
 
@@ -284,10 +285,22 @@ setInterval(mudarSlide,3500);
 // =========================
 
 const envelope = document.querySelector(".envelope");
-
 const abrirCarta = document.getElementById("abrirCarta");
 
-abrirCarta.addEventListener("click",()=>{
+if (envelope && abrirCarta) {
+
+    abrirCarta.addEventListener("click", () => {
+
+        envelope.classList.toggle("aberto");
+
+        abrirCarta.innerHTML =
+            envelope.classList.contains("aberto")
+                ? "Fechar Carta 💙"
+                : "Abrir Carta 💙";
+
+    });
+
+}
 
 envelope.classList.toggle("aberto");
 
@@ -415,30 +428,26 @@ setTimeout(escrever,3500);
 // =========================
 
 const presente = document.getElementById("giftBox");
-
 const carta = document.getElementById("amor");
 
-carta.style.display = "none";
+if (presente && carta) {
 
-presente.addEventListener("click",()=>{
+    carta.style.display = "none";
 
-presente.classList.add("aberta");
+    presente.addEventListener("click", () => {
 
-setTimeout(()=>{
+        presente.classList.add("aberta");
 
-document.getElementById("presente").style.display="none";
+        setTimeout(() => {
 
-carta.style.display="block";
+            document.getElementById("presente").style.display = "none";
+            carta.style.display = "block";
 
-carta.scrollIntoView({
+        }, 1200);
 
-behavior:"smooth"
+    });
 
-});
-
-},1200);
-
-});
+}
 
 // =========================
 // FUNDO COM PARTÍCULAS
