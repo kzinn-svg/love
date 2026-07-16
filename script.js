@@ -190,12 +190,13 @@ if (entrar && intro) {
 
     entrar.onclick = function () {
 
-        intro.style.display = "none";
+        console.log("Entrou!");
+
+        intro.remove();
 
     };
 
 }
-
 // =========================
 // ESTRELAS
 // =========================
