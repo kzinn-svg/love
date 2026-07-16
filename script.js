@@ -184,20 +184,21 @@ console.log("💙 Meu destino sempre será você.");
 // =========================
 
 const entrar = document.getElementById("entrar");
-
 const intro = document.getElementById("intro");
 
-entrar.addEventListener("click",()=>{
+if (entrar && intro) {
 
-intro.style.opacity="0";
+    entrar.addEventListener("click", () => {
 
-setTimeout(()=>{
+        intro.style.opacity = "0";
 
-intro.style.display="none";
+        setTimeout(() => {
+            intro.style.display = "none";
+        }, 900);
 
-},900);
+    });
 
-});
+}
 
 // =========================
 // ESTRELAS
