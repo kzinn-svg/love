@@ -229,60 +229,23 @@ Feito com todo meu amor 💙
 
 <!-- TELA DE ABERTURA -->
 
-<div id="intro">
+window.addEventListener("DOMContentLoaded", () => {
 
-    <div class="intro-box">
+    const entrar = document.getElementById("entrar");
+    const intro = document.getElementById("intro");
 
-        <h1>💙 Minha Princesa</h1>
+    if (entrar && intro) {
 
-        <p>
+        entrar.addEventListener("click", () => {
 
-            Antes de começar...
+            intro.style.opacity = "0";
 
-        </p>
+            setTimeout(() => {
+                intro.remove();
+            }, 700);
 
-        <p>
+        });
 
-            Quero que saiba que,
+    }
 
-            independente do tempo,
-
-            meu destino sempre será você.
-
-        </p>
-
-        <button id="entrar">
-
-            Entrar 💙
-
-        </button>
-
-    </div>
-
-</div>
-
-</body>
-
-<audio id="somClique" preload="auto">
-    <source src="assets/click.mp3" type="audio/mpeg">
-</audio>
-
-<div id="loading">
-
-    <div class="loader">
-
-        <div class="heartLoader">💙</div>
-
-        <h2>Carregando nosso universo...</h2>
-
-        <div class="barra">
-
-            <div class="progresso"></div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</html>
+});
