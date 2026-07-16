@@ -76,33 +76,23 @@ atualizarContador();
 // GALERIA AUTOMÁTICA
 // =========================
 
-const imagens = document.querySelectorAll(".slider img");
+window.addEventListener("load", () => {
 
-let atual = 0;
+    const tela = document.getElementById("loading");
 
-setInterval(()=>{
+    if (!tela) return;
 
-    imagens.forEach(img=>{
+    setTimeout(() => {
+        tela.style.opacity = "0";
+        tela.style.pointerEvents = "none";
 
-        img.style.opacity="0.4";
+        setTimeout(() => {
+            tela.remove();
+        }, 1000);
 
-        img.style.transform="scale(.9)";
+    }, 2500);
 
-    });
-
-    atual++;
-
-    if(atual>=imagens.length){
-
-        atual=0;
-
-    }
-
-    imagens[atual].style.opacity="1";
-
-    imagens[atual].style.transform="scale(1.05)";
-
-},3000);
+});
 
 
 // =========================
