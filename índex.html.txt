@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Minha Princesa 💙</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<canvas id="backgroundCanvas"></canvas>
+
+<div id="particles"></div>
+
+<header>
+
+<h1>Minha Princesa 💙</h1>
+
+<p id="digitando"></p>
+
+<a href="#amor" class="btn">
+
+Clique aqui amor
+
+</a>
+
+</header>
+
+<section id="contador">
+
+<h2>
+
+Estamos juntos há
+
+</h2>
+
+<div class="tempo">
+
+<div>
+
+<h3 id="dias">00</h3>
+
+<span>Dias</span>
+
+</div>
+
+<div>
+
+<h3 id="horas">00</h3>
+
+<span>Horas</span>
+
+</div>
+
+<div>
+
+<h3 id="minutos">00</h3>
+
+<span>Minutos</span>
+
+</div>
+
+<div>
+
+<h3 id="segundos">00</h3>
+
+<span>Segundos</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="presente">
+
+<h2>Tenho um presente para você 💙</h2>
+
+<div class="giftBox" id="giftBox">
+
+<div class="giftTop"></div>
+
+<div class="giftBottom"></div>
+
+</div>
+
+<p>Clique na caixa para abrir ✨</p>
+
+</section>
+
+<section id="amor">
+
+<h2>Uma carta para você 💙</h2>
+
+<div class="envelope">
+
+<div class="tampa"></div>
+
+<div class="carta">
+
+<h3>Minha Cura é Você 💙</h3>
+
+<p>
+
+Você é tudo aquilo que me faz sorrir.
+
+Meu amor, minha felicidade está em seus risos e abraços.
+
+</p>
+
+<p>
+
+Quero você hoje, amanhã e sempre.
+
+</p>
+
+<p>
+
+Pois eu te amo.
+
+Pois eu te sinto.
+
+E te quero assim como quero meu futuro.
+
+Aquele em que você estará como minha esposa.
+
+</p>
+
+<p>
+
+Eu te amo,
+
+por tin tin a tin tin.
+
+💙
+
+</p>
+
+</div>
+
+</div>
+
+<button id="abrirCarta">
+
+Abrir Carta 💙
+
+</button>
+
+</section>
+
+<section id="galeria">
+
+<h2>Nossos Momentos</h2>
+
+<div class="carousel">
+
+<div class="slides">
+
+<img src="assets/foto1.jpg" alt="Foto 1">
+
+<img src="assets/foto2.jpg" alt="Foto 2">
+
+</div>
+
+<div class="indicadores">
+
+<span class="ativo"></span>
+
+<span></span>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="musica">
+
+<h2>Nossa Música 💙</h2>
+
+<p>
+Aperte o play e aproveite esse momento...
+</p>
+
+<div class="spotify-player">
+
+<iframe style="border-radius:20px"
+
+src="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp?utm_source=generator"
+
+width="100%"
+
+height="152"
+
+frameborder="0"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+Feito com todo meu amor 💙
+
+</footer>
+
+<script src="script.js"></script>
+
+<!-- TELA DE ABERTURA -->
+
+<div id="intro">
+
+    <div class="intro-box">
+
+        <h1>💙 Minha Princesa</h1>
+
+        <p>
+
+            Antes de começar...
+
+        </p>
+
+        <p>
+
+            Quero que saiba que,
+
+            independente do tempo,
+
+            meu destino sempre será você.
+
+        </p>
+
+        <button id="entrar">
+
+            Entrar 💙
+
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+<audio id="somClique" preload="auto">
+    <source src="assets/click.mp3" type="audio/mpeg">
+</audio>
+
+<div id="loading">
+
+    <div class="loader">
+
+        <div class="heartLoader">💙</div>
+
+        <h2>Carregando nosso universo...</h2>
+
+        <div class="barra">
+
+            <div class="progresso"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</html>
