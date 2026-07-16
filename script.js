@@ -186,17 +186,11 @@ console.log("💙 Meu destino sempre será você.");
 const entrar = document.getElementById("entrar");
 const intro = document.getElementById("intro");
 
-if (entrar && intro) {
+entrar.onclick = function () {
+    alert("O botão foi clicado!");
+    intro.style.display = "none";
+};
 
-    entrar.onclick = function () {
-
-        console.log("Entrou!");
-
-        intro.remove();
-
-    };
-
-}
 // =========================
 // ESTRELAS
 // =========================
