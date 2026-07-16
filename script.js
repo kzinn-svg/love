@@ -188,16 +188,11 @@ const intro = document.getElementById("intro");
 
 if (entrar && intro) {
 
-    entrar.addEventListener("click", () => {
+    entrar.onclick = function () {
 
-        intro.style.opacity = "0";
-        intro.style.pointerEvents = "none";
+        intro.style.display = "none";
 
-        setTimeout(() => {
-            intro.remove();
-        }, 900);
-
-    });
+    };
 
 }
 
